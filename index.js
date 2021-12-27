@@ -17,10 +17,10 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 app.set('view engine','ejs')
 
-app.get('/',(req,res)=>{
-    res.json({message:"home page"})
+// app.get('/',(req,res)=>{
+//     res.json({message:"home page"})
  
-})
+// })
 app.post('/compile',async (req,res)=>{
     const {code,language,input}=req.body;
     console.log(input)
