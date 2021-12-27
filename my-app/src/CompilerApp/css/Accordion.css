@@ -1,0 +1,16 @@
+.accordion-content{
+    display: flex;
+    justify-content: space-around;
+}
+#input{
+    height: 15rem;
+    width: 35rem;
+}
+#output{
+    height: 15rem;
+    width: 35rem;
+}
+b{
+    font-weight:bolder;
+    font-size: large;
+}
