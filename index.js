@@ -6,7 +6,7 @@ const bodyParser=require('body-parser')
 
 const app=express()
 const compiler=require('./middleware/compiler')
-const PORT= process.env.PORT || 3000
+const PORT= process.env.PORT || 5000
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
@@ -17,10 +17,10 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 app.set('view engine','ejs')
 
-// app.get('/',(req,res)=>{
-//     res.json({message:"home page"})
+app.get('/',(req,res)=>{
+    res.json({message:"home page"})
  
-// })
+})
 app.post('/compile',async (req,res)=>{
     const {code,language,input}=req.body;
     console.log(input)

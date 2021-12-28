@@ -7,12 +7,26 @@ const Canvas = () => {
     function erase(){
       return sketchDraw.current.eraseMode(true)
     }
+    function draw(){
+    
+      return sketchDraw.current.eraseMode(false)
+    }
     function undo(){
      return sketchDraw.current.undo()
     }
     function redo(){
       return sketchDraw.current.redo()
      }
+    //  function exportImg(){
+    //    console.log("exporting")
+    //    console.log(sketchDraw.current.exportImage('png'))
+    //   sketchDraw.current.exportImage('png').then((res)=>{
+    //     console.log(res)
+    //     return res;
+    //   }).catch((e)=>{
+    //     return e;
+    //   })
+    //  }
      function clearAll(){
       return sketchDraw.current.resetCanvas()
      }
@@ -38,6 +52,8 @@ const Canvas = () => {
     <button type="button" className="btn btn-outline-primary" onClick={redo}>Redo</button>
     <button type="button" className="btn btn-outline-primary" onClick={clearAll}>Clear all</button>
     <button type="button" className="btn btn-outline-primary" onClick={erase}>Erase</button>
+    <button type="button" className="btn btn-outline-primary" onClick={draw}>Draw</button>
+    {/* <button type="button" className="btn btn-outline-primary" onClick={exportImg}>Export image</button> */}
     <button type="button" className="btn btn-outline-primary" onClick={()=>{zoomIn(zoom+1)}}>+</button>
     
   </div>
